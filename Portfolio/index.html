@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Prénom Nom — Portfolio</title>
+  <meta name="description" content="Portfolio — Prénom Nom">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="page-home" aria-label="Site portfolio">
+  <!-- BACKGROUND LAYER -->
+  <div class="bg-layer" aria-hidden="true">
+    <svg class="bg-svg" viewBox="0 0 1200 2000" preserveAspectRatio="xMidYMid slice" role="img" focusable="false">
+      <defs>
+        <linearGradient id="neon" x1="0" x2="1">
+          <stop offset="0" stop-color="#5ee0ff"/>
+          <stop offset="1" stop-color="#2f7cff"/>
+        </linearGradient>
+      </defs>
+      <g class="nodes" fill="url(#neon)" opacity="0.06">
+        <circle cx="220" cy="1500" r="10"/>
+        <circle cx="420" cy="1600" r="8"/>
+        <circle cx="600" cy="1480" r="9"/>
+      </g>
+    </svg>
+  </div>
+
+  <!-- HEADER (identique sur toutes les pages) -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Prénom Nom</a>
+
+      <nav class="nav" id="nav" aria-label="Navigation principale">
+        <a href="index.html">Accueil</a>
+        <a href="projects.html">Projets</a>
+        <a href="about.html">À propos</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="controls" role="group" aria-label="Contrôles">
+        <button id="themeToggle" aria-label="Basculer thème">🌙</button>
+        <button id="burger" aria-label="Menu" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-left">
+        <h1 id="hero-title">Bonjour — Prénom Nom</h1>
+        <p class="lead">Développeur·se frontend. J’aime produire des interfaces rapides, accessibles et soignées — basées sur la simplicité et la clarté.</p>
+        <p class="hero-actions">
+          <a class="btn" href="projects.html">Voir mes projets</a>
+          <a class="btn ghost" href="/cv.pdf" target="_blank" rel="noopener">Télécharger CV</a>
+        </p>
+      </div>
+
+      <div class="hero-right" aria-hidden="true">
+        <!-- utiliser un chemin relatif, par ex. images/portrait.jpg -->
+        <img src="images/hero.png" alt="Portrait" class="hero-illus">
+      </div>
+    </section>
+
+    <section class="featured-projects" aria-labelledby="recent-projects">
+      <h2 id="recent-projects">Projets récents</h2>
+      <div id="homeProjectsGrid" class="grid projects-grid" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <small>© <span id="year">2026</span> Prénom Nom</small>
+      <nav class="footer-links" aria-label="Liens sociaux">
+        <a href="https://github.com/ton-compte" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://linkedin.com/in/ton-compte" target="_blank" rel="noopener">LinkedIn</a>
+      </nav>
+    </div>
+  </footer>
+
+  <div class="floating-controls" aria-hidden="false">
+    <button id="goTop" class="float-btn" aria-label="Aller en haut">⬆️</button>
+    <button id="goBottom" class="float-btn" aria-label="Aller en bas">⬇️</button>
+    <button id="goBack" class="float-btn" aria-label="Revenir">↩️</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

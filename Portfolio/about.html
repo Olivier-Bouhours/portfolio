@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>À propos — Prénom Nom</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="page-about" aria-label="À propos">
+  <div class="bg-layer" aria-hidden="true"><svg viewBox="0 0 1200 2000" preserveAspectRatio="xMidYMid slice"></svg></div>
+
+  <!-- SAME HEADER -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Prénom Nom</a>
+
+      <nav class="nav" id="nav" aria-label="Navigation principale">
+        <a href="index.html">Accueil</a>
+        <a href="projects.html">Projets</a>
+        <a href="about.html">À propos</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="controls" role="group" aria-label="Contrôles">
+        <button id="themeToggle" aria-label="Basculer thème">🌙</button>
+        <button id="burger" aria-label="Menu" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="about" aria-labelledby="about-title">
+      <h1 id="about-title">À propos</h1>
+      <p class="lead">Je suis un·e développeur·se frontend spécialisé·e dans les interfaces performantes, l'accessibilité et l'expérience utilisateur. J'aime simplifier des interfaces complexes et écrire du code maintenable.</p>
+
+      <h2 style="margin-top:18px">Expérience & outils</h2>
+      <ul>
+        <li>HTML5, CSS moderne (Grid, Flexbox), BEM</li>
+        <li>JavaScript moderne, React / Vue, tests</li>
+        <li>Performance, accessibilité, optimisation SEO</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-inner"><small>© <span id="year">2026</span> Prénom Nom</small></div></footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

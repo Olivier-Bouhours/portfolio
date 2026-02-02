@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Projets — Prénom Nom</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="page-projects" aria-label="Projets">
+  <div class="bg-layer" aria-hidden="true">
+    <svg viewBox="0 0 1200 2000" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="neon" x1="0" x2="1"><stop offset="0" stop-color="#5ee0ff"/><stop offset="1" stop-color="#2f7cff"/></linearGradient></defs></svg>
+  </div>
+
+  <!-- SAME HEADER -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Prénom Nom</a>
+
+      <nav class="nav" id="nav" aria-label="Navigation principale">
+        <a href="index.html">Accueil</a>
+        <a href="projects.html">Projets</a>
+        <a href="about.html">À propos</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="controls" role="group" aria-label="Contrôles">
+        <button id="themeToggle" aria-label="Basculer thème">🌙</button>
+        <button id="burger" aria-label="Menu" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="projects-list" aria-labelledby="projects-title">
+      <div class="projects-header" style="display:flex;align-items:center;justify-content:space-between;gap:16px">
+        <div>
+          <h1 id="projects-title">Projets</h1>
+          <p class="muted">Ajoute, modifie ou supprime des projets — tout est stocké localement.</p>
+        </div>
+        <div>
+          <button id="addProjectBtn" class="btn">+ Ajouter un projet</button>
+        </div>
+      </div>
+
+      <div id="projectsGrid" class="grid projects-grid" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner"><small>© <span id="year">2026</span> Prénom Nom</small></div>
+  </footer>
+
+  <!-- Modal for adding a project -->
+  <div id="projectModal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-content">
+      <header class="modal-header" style="display:flex;align-items:center;justify-content:space-between">
+        <h2>Ajouter un projet</h2>
+        <button id="closeModal" class="close" aria-label="Fermer">&times;</button>
+      </header>
+      <form id="projectForm" class="project-form" novalidate>
+        <label>Titre<input name="title" placeholder="Titre du projet" required></label>
+        <label>Description<textarea name="description" rows="3" placeholder="Courte description" required></textarea></label>
+        <label>Technos<input name="tech" placeholder="Ex: React • Node • Docker"></label>
+        <label>URL (relatif ou absolu)<input name="url" placeholder="ex: projets/mon-projet/index.html"></label>
+        <label>Image (chemin relatif ou absolu)<input name="image" placeholder="ex: images/mon-projet.jpg"></label>
+        <div class="modal-actions" style="display:flex;gap:8px;justify-content:flex-end;margin-top:12px">
+          <button id="cancelProject" type="button" class="btn ghost">Annuler</button>
+          <button type="submit" class="btn">Ajouter</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="floating-controls"><button id="goTop" class="float-btn">⬆️</button><button id="goBottom" class="float-btn">⬇️</button><button id="goBack" class="float-btn">↩️</button></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
